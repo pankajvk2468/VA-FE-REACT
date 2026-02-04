@@ -7,7 +7,6 @@ import {
   MessageSquare,
   Users,
   Building2,
-  UserCog,
   Shield,
   X,
   Briefcase,

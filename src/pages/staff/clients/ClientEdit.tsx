@@ -20,7 +20,7 @@ const ClientEdit: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabId>('startHere');
   const [isSaving, setIsSaving] = useState(false);
 
-  const [tabs, setTabs] = useState<TabInfo[]>([
+  const [tabs] = useState<TabInfo[]>([
     { id: 'startHere', label: 'Start Here', completed: false },
     { id: 'intentToFile', label: 'Intent to File', completed: false },
     { id: 'general', label: 'General', completed: false },

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const placeholder = (title: string) => () => (
   <div className="fade-in">
     <h1 className="text-3xl font-bold text-gray-900 mb-8">{title}</h1>

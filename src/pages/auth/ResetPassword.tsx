@@ -53,7 +53,7 @@ const ResetPassword: React.FC = () => {
 
     setIsLoading(true);
     try {
-      await resetPassword(token, password);
+      await resetPassword();
       setSuccess(true);
       setTimeout(() => {
         navigate('/login');

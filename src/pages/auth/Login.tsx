@@ -66,7 +66,7 @@ const Login: React.FC = () => {
 
     setIsLoading(true);
     try {
-      await verifyOTP(otp);
+      await verifyOTP();
       navigate('/dashboard');
     } catch (err: any) {
       setError(err.message || 'Invalid OTP code');

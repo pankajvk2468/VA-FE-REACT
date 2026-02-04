@@ -16,10 +16,10 @@ export interface AuthContextType {
   isAuthenticated: boolean;
   isLoading: boolean;
   login: (email: string, password: string) => Promise<void>;
-  verifyOTP: (otp: string) => Promise<void>;
+  verifyOTP: () => Promise<void>;
   logout: () => void;
   forgotPassword: (email: string) => Promise<void>;
-  resetPassword: (token: string, password: string) => Promise<void>;
+  resetPassword: () => Promise<void>;
 }
 
 export interface FormData {

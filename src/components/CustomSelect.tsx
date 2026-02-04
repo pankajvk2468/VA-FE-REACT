@@ -24,7 +24,6 @@ export const CustomSelect: React.FC<CustomSelectProps> = ({
   placeholder = 'Select an option',
   name,
   id,
-  required = false,
   disabled = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false);

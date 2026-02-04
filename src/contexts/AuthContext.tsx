@@ -18,7 +18,6 @@ interface AuthProviderProps {
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [otpRequired, setOtpRequired] = useState(false);
   const [tempCredentials, setTempCredentials] = useState<{ email: string; password: string } | null>(null);
 
   useEffect(() => {
@@ -56,7 +55,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     }
   };
 
-  const verifyOTP = async (otp: string) => {
+  const verifyOTP = async () => {
     setIsLoading(true);
     try {
       // TODO: Replace with actual API call
@@ -137,7 +136,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     console.log('Password reset email sent to:', email);
   };
 
-  const resetPassword = async (token: string, password: string) => {
+  const resetPassword = async () => {
     // TODO: Replace with actual API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     console.log('Password reset successful');
