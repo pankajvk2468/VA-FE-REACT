@@ -1,0 +1,1 @@
+export { ProfessionalsList } from '../StaffPages';
