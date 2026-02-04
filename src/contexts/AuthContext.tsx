@@ -42,7 +42,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       // Mock: Check credentials and determine role
       // In production, the backend will validate and return user data
-      setOtpRequired(true);
       setTempCredentials({ email, password });
       
       throw new Error('OTP_REQUIRED');
@@ -114,7 +113,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       
       setUser(mockUser);
       localStorage.setItem('user', JSON.stringify(mockUser));
-      setOtpRequired(false);
       setTempCredentials(null);
     } catch (error) {
       throw new Error('Invalid OTP code');
@@ -126,7 +124,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem('user');
-    setOtpRequired(false);
     setTempCredentials(null);
   };
 
